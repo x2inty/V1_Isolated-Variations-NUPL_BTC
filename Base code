@@ -55,7 +55,7 @@ data.dropna(inplace=True)
 cols_to_round = ['14-day chg', 'Fut_Chg_7D', 'Fut_Chg_14D', 'Vol_7D', 'Vol_14D', 'Vol_21D', 'SMA_7', 'SMA_14', 'SMA_21', 'RSI_7', 'RSI_14', 'RSI_21']
 data[cols_to_round] = data[cols_to_round].round(3)
 
-# Step 5: Filter data for the range from 01/01/2025 to 31/01/2025
+# Step 5: Filter data for the range from 2025-01-01 to 2025-01-31
 start_date = '2025-01-01'
 end_date = '2025-01-31'
 data_filtered = data[(data['DateTime'] >= start_date) & (data['DateTime'] <= end_date)]
